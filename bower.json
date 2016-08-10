@@ -1,0 +1,21 @@
+{
+  "name": "careershub",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Kostas Tsalikidis <tsalikidhs@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.2.0",
+    "angular": "^1.5.8"
+  }
+}

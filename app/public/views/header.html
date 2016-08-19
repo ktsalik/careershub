@@ -30,7 +30,20 @@
       Categories
     </a>
     <div dropdown trigger="click">
-      <a class="button is-link is-fullwidth" ui-sref="jobs({ category: category.name })" ng-repeat="category in app.statistics.topCategories">{{category.name}} [{{category.jobsCount}}]</a>
+      <div class="container">
+      <div class="columns is-marginless" ng-repeat="category in app.statistics.topCategories">
+        <div class="column is-9 is-paddingless has-text-left">
+          <!-- <div class="level-item"> -->
+            <a class="button is-link is-fullwidth" ui-sref="jobs({ category: category.name })">{{category.name}}</a>
+          <!-- </div> -->
+        </div>
+        <div class="column is-3 is-paddingless has-text-right flex-center-content">
+          <!-- <div class="level-item"> -->
+            <span class="tag is-small">{{category.jobsCount}}</span>
+          <!-- </div> -->
+        </div>
+      </div>
+      </div>
     </div>
 
     <span class="nav-item">

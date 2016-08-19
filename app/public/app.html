@@ -1,15 +1,29 @@
 <html>
   <head>
+    <script src="bower_components/pace/pace.min.js"></script>
+    <link href="bower_components/pace/themes/blue/pace-theme-flash.css" rel="stylesheet" />
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="bower_components/bulma/bulma.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/messenger/build/css/messenger.css">
+    <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body ng-app="CareersHub" ng-controller="AppController as app">
     
-    <h1>careershub</h1>
-    {{app.test}}
+    <ui-view name="header"></ui-view>
+    <ui-view name="content"></ui-view>
     
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/messenger/build/js/messenger.min.js"></script>
     <script src="app.js"></script>
     <script src="assets/js/controllers.min.js"></script>
+    <script src="assets/js/directives.min.js"></script>
+    <script src="assets/js/components.min.js"></script>
   </body>
 </html>

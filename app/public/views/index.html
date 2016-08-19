@@ -1,0 +1,41 @@
+<div class="columns">
+  <div class="column">
+    <section class="hero is-info is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title brand-title">CareersHub</h1>
+          <h2 class="subtitle">Find Jobs</h2>
+          <div class="columns">
+            <div class="column">
+              <p class="control">
+                <input class="input" type="text" placeholder="Keywords (separated with comma or space)" ng-model="index.search.keyword" ng-keyup="$event.keyCode == 13 && index.doSearch()">
+              </p>
+            </div>
+            <div class="column">
+              <p class="control">
+                <input class="input is-disabled" type="text" placeholder="City or Country">
+              </p>
+            </div>
+            <div class="column">
+              <h5 class="title is-5">Top 5 categories</h5>
+              <div class="job-category-list">
+                <job-category ng-repeat="category in app.statistics.topCategories.slice(0, 5)" name="{{category.name}}"></job-category>
+              </div>
+            </div>
+          </div>
+          <button class="button is-large is-primary is-outlined" ng-click="index.doSearch()">Find Jobs</button>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">
+          Latest Jobs
+        </h1>
+        <div class="content job-list">
+          <job-item ng-repeat="job in index.jobs.latest" job="job"></job-item>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

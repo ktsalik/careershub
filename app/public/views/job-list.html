@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title has-text-centered">{{jobList.jobs.count}} jobs found</h1>
+    <div class="level">
+      <div class="level-left"></div>
+      <div class="level-right">
+        <div class="level-item job-category-list" ng-if="jobList.jobs.categories">
+          <job-category ng-repeat="category in jobList.jobs.categories" name="{{category}}"></job-category>
+        </div>
+        <div class="level-item" ng-if="jobList.jobs.keyword">
+          <span class="tag is-black">{{jobList.jobs.keyword}}</span>
+        </div>
+      </div>
+    </div>
+    {{jobList.test}}
+    <section class="section">
+      <div class="content job-list">
+        <job-item ng-repeat="job in jobList.jobs.items" job="job"></job-item>
+      </div>
+      <button class="button is-primary is-medium is-fullwidth outlined" ng-class="{ 'is-loading' : jobList.jobs.loadingMore }" ng-click="jobList.loadMore()">Load More</button>
+    </section>
+  </div>
+</section>

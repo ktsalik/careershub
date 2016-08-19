@@ -1,0 +1,49 @@
+<nav class="nav">
+  <div class="nav-left">
+    <a class="nav-item is-brand" ui-sref="index">
+      <img src="assets/img/logo.png" alt="CareersHub logo">
+    </a>
+  </div>
+
+  <div class="nav-center">
+    <a class="nav-item" href="#">
+      <span class="icon">
+        <i class="fa fa-github"></i>
+      </span>
+    </a>
+  </div>
+
+  <span class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+
+  <div class="nav-right nav-menu">
+    <a class="nav-item" ui-sref="index">
+      Home
+    </a>
+    <a class="nav-item" href="#">
+      Source
+    </a>
+    <a class="nav-item">
+      Categories
+    </a>
+    <div dropdown trigger="click">
+      <a class="button is-link is-fullwidth" ui-sref="jobs({ category: category.name })" ng-repeat="category in app.statistics.topCategories">{{category.name}} [{{category.jobsCount}}]</a>
+    </div>
+
+    <span class="nav-item">
+      <a id="btn-twitter" href="https://twitter.com/share" class="button is-outlined twitter-share-button" data-show-count="false">
+        <span class="icon"><i class="fa fa-twitter"></i></span>
+        <span>Tweet</span>
+      </a>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div class="fb-share-button" data-href="http://careershub.io">
+        <a class="button is-info is-outlined fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcareershub.io%2F&amp;src=sdkpreparse">
+          <span class="icon"><i class="fa fa-facebook"></i></span><span>Share</span>
+        </a>
+      </div>
+    </span>
+  </div>
+</nav>

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'source-code-pro-semi-bold';
+  src: url(../fonts/Source_Code_Pro/SourceCodePro-Semibold.ttf);
+}
+
+/**
+* Application Styles
+*/
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#btn-twitter {
+  color: #55acee;
+  border-color: #55acee;
+  margin-right: 5px;
+}
+
+#btn-twitter:hover {
+  background: #55acee;
+  border-color: #55acee;
+  color: #fff;
+}
+
+.brand-title {
+  font-family: 'source-code-pro-semi-bold'
+}
+
+/**
+* Page Styles
+*/
+
+.job-list .job-item {
+  margin-bottom: 50px;
+}
+
+.job-item {
+  position: relative;
+  border: 1px solid #97cd76;
+  padding: 15px 20px;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+}
+
+.job-item:before {
+  background: #97cd76;
+  color: #FFF;
+  border-radius: 3px 3px 0 0;
+  bottom: 100%;
+  content: "Open";
+  display: inline-block;
+  font-size: 7px;
+  font-weight: bold;
+  left: -1px;
+  letter-spacing: 1px;
+  padding: 3px 5px;
+  position: absolute;
+  text-transform: uppercase;
+  vertical-align: top;
+  border-bottom-left-radius: 0;
+}
+
+.job-item div.title {
+  margin-bottom: 20px;
+}
+
+.job-item .job-category {
+  margin: 0 5px;
+}
+
+.job-category-list .job-category, .job-detail .job-category {
+  margin-right: 5px;
+}
+
+[dropdown] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  padding: 10px;
+  z-index: 9999;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/**
+* Helpers
+*/
+
+.text-light {
+  color: #EDEDED;
+}
+
+.content-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+* Bulma overrides
+*/
+
+.is-brand img {
+  max-height: 50px;
+  margin-left: 50px;
+}
+
+.tag {
+  border-radius: 2px;
+  font-weight: bolder;
+}
+
+.tag a {
+  border: 0 !important;
+  color: #4d4d4d !important;
+}
+
+.tag.is-primary,
+.tag a,
+.button.is-primary,
+.button.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus {
+  color: #4d4d4d;
+}
+
+.button.is-link {
+  text-decoration: none;
+}

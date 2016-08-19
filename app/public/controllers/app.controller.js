@@ -2,10 +2,14 @@ angular
   .module('CareersHub')
   .controller('AppController', AppController);
   
-AppController.$inject = [];
+AppController.$inject = ['$http'];
 
-function AppController() {
+function AppController($http) {
   var vm = this;
   
-  vm.test = 'test';
+  vm.statistics = {};
+  
+  $http.get('/api').then(function(response) {
+    vm.statistics = response.data.statistics;
+  });
 }
